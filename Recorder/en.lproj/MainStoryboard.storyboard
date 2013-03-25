@@ -63,14 +63,25 @@
             </objects>
             <point key="canvasLocation" x="451" y="267"/>
         </scene>
-        <!--View Controller - On Air-->
+        <!--Recording View Controller - On Air-->
         <scene sceneID="Obq-OG-OWQ">
             <objects>
-                <viewController title="On Air" id="Kzm-oR-1ua" sceneMemberID="viewController">
+                <viewController title="On Air" id="Kzm-oR-1ua" customClass="CCRecordingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iKN-Ly-p5T">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nice picture here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCP-2h-bmB">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lCP-2h-bmB" firstAttribute="centerX" secondItem="iKN-Ly-p5T" secondAttribute="centerX" type="default" id="Yzz-p1-Yny"/>
+                            <constraint firstItem="lCP-2h-bmB" firstAttribute="top" secondItem="iKN-Ly-p5T" secondAttribute="top" constant="175" id="ceC-b2-v2V"/>
+                        </constraints>
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="FdP-Z3-lXo"/>
@@ -79,7 +90,7 @@
                     </toolbarItems>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackTranslucent"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>

@@ -23,6 +23,7 @@
 		79BDAAFB16FDCE2B00F1A581 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BDAAD616FDCE2B00F1A581 /* Foundation.framework */; };
 		79BDAB0316FDCE2B00F1A581 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79BDAB0116FDCE2B00F1A581 /* InfoPlist.strings */; };
 		79BDAB0616FDCE2B00F1A581 /* RecorderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAB0516FDCE2B00F1A581 /* RecorderTests.m */; };
+		79BDAB1116FF773500F1A581 /* CCRecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAB1016FF773500F1A581 /* CCRecordingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		79BDAB0216FDCE2B00F1A581 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		79BDAB0416FDCE2B00F1A581 /* RecorderTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecorderTests.h; sourceTree = "<group>"; };
 		79BDAB0516FDCE2B00F1A581 /* RecorderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecorderTests.m; sourceTree = "<group>"; };
+		79BDAB0F16FF773500F1A581 /* CCRecordingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRecordingViewController.h; sourceTree = "<group>"; };
+		79BDAB1016FF773500F1A581 /* CCRecordingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRecordingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				79BDAAEC16FDCE2B00F1A581 /* MainStoryboard.storyboard */,
 				79BDAAEF16FDCE2B00F1A581 /* CCRecordingListViewController.h */,
 				79BDAAF016FDCE2B00F1A581 /* CCRecordingListViewController.m */,
+				79BDAB0F16FF773500F1A581 /* CCRecordingViewController.h */,
+				79BDAB1016FF773500F1A581 /* CCRecordingViewController.m */,
 				79BDAADB16FDCE2B00F1A581 /* Supporting Files */,
 			);
 			path = Recorder;
@@ -274,6 +279,7 @@
 				79BDAAE116FDCE2B00F1A581 /* main.m in Sources */,
 				79BDAAE516FDCE2B00F1A581 /* CCAppDelegate.m in Sources */,
 				79BDAAF116FDCE2B00F1A581 /* CCRecordingListViewController.m in Sources */,
+				79BDAB1116FF773500F1A581 /* CCRecordingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
