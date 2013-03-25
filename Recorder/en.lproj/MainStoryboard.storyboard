@@ -100,6 +100,9 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackTranslucent"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="recButton" destination="5pM-jR-Af2" id="YY5-Ti-Qb5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSN-lK-JPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
