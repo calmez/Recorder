@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CCRecordingListViewController : UITableViewController
+@interface CCRecordingListViewController : UITableViewController <UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

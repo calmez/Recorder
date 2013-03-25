@@ -36,6 +36,10 @@
                                 <gestureRecognizers/>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="T4O-JN-xEq" id="eI0-D8-6ov"/>
+                            <outlet property="delegate" destination="T4O-JN-xEq" id="5OA-BV-5Db"/>
+                        </connections>
                     </tableView>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="MAC-DZ-Mov"/>
@@ -58,6 +62,9 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackTranslucent"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Rqc-1P-5ke" id="SIU-e3-eZR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVU-oq-6LQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
