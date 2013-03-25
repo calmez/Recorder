@@ -24,6 +24,7 @@
 		79BDAB0316FDCE2B00F1A581 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79BDAB0116FDCE2B00F1A581 /* InfoPlist.strings */; };
 		79BDAB0616FDCE2B00F1A581 /* RecorderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAB0516FDCE2B00F1A581 /* RecorderTests.m */; };
 		79BDAB1116FF773500F1A581 /* CCRecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAB1016FF773500F1A581 /* CCRecordingViewController.m */; };
+		79BDAB1F1700E8E000F1A581 /* CCRecording.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAB1E1700E8E000F1A581 /* CCRecording.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		79BDAB0F16FF773500F1A581 /* CCRecordingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRecordingViewController.h; sourceTree = "<group>"; };
 		79BDAB1016FF773500F1A581 /* CCRecordingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRecordingViewController.m; sourceTree = "<group>"; };
 		79BDAB1B1700E51500F1A581 /* utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utilities.h; sourceTree = "<group>"; };
+		79BDAB1D1700E8E000F1A581 /* CCRecording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCRecording.h; path = Models/CCRecording.h; sourceTree = "<group>"; };
+		79BDAB1E1700E8E000F1A581 /* CCRecording.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCRecording.m; path = Models/CCRecording.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,7 @@
 		79BDAADA16FDCE2B00F1A581 /* Recorder */ = {
 			isa = PBXGroup;
 			children = (
+				79BDAB1C1700E8B400F1A581 /* Models */,
 				79BDAB1B1700E51500F1A581 /* utilities.h */,
 				79BDAAE316FDCE2B00F1A581 /* CCAppDelegate.h */,
 				79BDAAE416FDCE2B00F1A581 /* CCAppDelegate.m */,
@@ -165,6 +169,15 @@
 				79BDAB0116FDCE2B00F1A581 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79BDAB1C1700E8B400F1A581 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				79BDAB1D1700E8E000F1A581 /* CCRecording.h */,
+				79BDAB1E1700E8E000F1A581 /* CCRecording.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +295,7 @@
 				79BDAAE516FDCE2B00F1A581 /* CCAppDelegate.m in Sources */,
 				79BDAAF116FDCE2B00F1A581 /* CCRecordingListViewController.m in Sources */,
 				79BDAB1116FF773500F1A581 /* CCRecordingViewController.m in Sources */,
+				79BDAB1F1700E8E000F1A581 /* CCRecording.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +476,7 @@
 				79BDAB0B16FDCE2B00F1A581 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79BDAB0C16FDCE2B00F1A581 /* Build configuration list for PBXNativeTarget "RecorderTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +485,7 @@
 				79BDAB0E16FDCE2B00F1A581 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
