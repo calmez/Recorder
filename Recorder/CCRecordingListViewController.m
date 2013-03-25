@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Conrad Calmez. All rights reserved.
 //
 
-#import "CCViewController.h"
+#import "CCRecordingListViewController.h"
 
-@interface CCViewController ()
+@interface CCRecordingListViewController ()
 
 @end
 
-@implementation CCViewController
+@implementation CCRecordingListViewController
 
 - (void)viewDidLoad
 {

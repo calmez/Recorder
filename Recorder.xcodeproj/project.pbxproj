@@ -17,7 +17,7 @@
 		79BDAAE916FDCE2B00F1A581 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BDAAE816FDCE2B00F1A581 /* Default@2x.png */; };
 		79BDAAEB16FDCE2B00F1A581 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BDAAEA16FDCE2B00F1A581 /* Default-568h@2x.png */; };
 		79BDAAEE16FDCE2B00F1A581 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BDAAEC16FDCE2B00F1A581 /* MainStoryboard.storyboard */; };
-		79BDAAF116FDCE2B00F1A581 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAAF016FDCE2B00F1A581 /* CCViewController.m */; };
+		79BDAAF116FDCE2B00F1A581 /* CCRecordingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAAF016FDCE2B00F1A581 /* CCRecordingListViewController.m */; };
 		79BDAAF916FDCE2B00F1A581 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BDAAF816FDCE2B00F1A581 /* SenTestingKit.framework */; };
 		79BDAAFA16FDCE2B00F1A581 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BDAAD416FDCE2B00F1A581 /* UIKit.framework */; };
 		79BDAAFB16FDCE2B00F1A581 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BDAAD616FDCE2B00F1A581 /* Foundation.framework */; };
@@ -50,8 +50,8 @@
 		79BDAAE816FDCE2B00F1A581 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		79BDAAEA16FDCE2B00F1A581 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		79BDAAED16FDCE2B00F1A581 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		79BDAAEF16FDCE2B00F1A581 /* CCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
-		79BDAAF016FDCE2B00F1A581 /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		79BDAAEF16FDCE2B00F1A581 /* CCRecordingListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCRecordingListViewController.h; sourceTree = "<group>"; };
+		79BDAAF016FDCE2B00F1A581 /* CCRecordingListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCRecordingListViewController.m; sourceTree = "<group>"; };
 		79BDAAF716FDCE2B00F1A581 /* RecorderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecorderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BDAAF816FDCE2B00F1A581 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		79BDAB0016FDCE2B00F1A581 /* RecorderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RecorderTests-Info.plist"; sourceTree = "<group>"; };
@@ -120,8 +120,8 @@
 				79BDAAE316FDCE2B00F1A581 /* CCAppDelegate.h */,
 				79BDAAE416FDCE2B00F1A581 /* CCAppDelegate.m */,
 				79BDAAEC16FDCE2B00F1A581 /* MainStoryboard.storyboard */,
-				79BDAAEF16FDCE2B00F1A581 /* CCViewController.h */,
-				79BDAAF016FDCE2B00F1A581 /* CCViewController.m */,
+				79BDAAEF16FDCE2B00F1A581 /* CCRecordingListViewController.h */,
+				79BDAAF016FDCE2B00F1A581 /* CCRecordingListViewController.m */,
 				79BDAADB16FDCE2B00F1A581 /* Supporting Files */,
 			);
 			path = Recorder;
@@ -273,7 +273,7 @@
 			files = (
 				79BDAAE116FDCE2B00F1A581 /* main.m in Sources */,
 				79BDAAE516FDCE2B00F1A581 /* CCAppDelegate.m in Sources */,
-				79BDAAF116FDCE2B00F1A581 /* CCViewController.m in Sources */,
+				79BDAAF116FDCE2B00F1A581 /* CCRecordingListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
