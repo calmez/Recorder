@@ -61,6 +61,7 @@
 		79BDAB0516FDCE2B00F1A581 /* RecorderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecorderTests.m; sourceTree = "<group>"; };
 		79BDAB0F16FF773500F1A581 /* CCRecordingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRecordingViewController.h; sourceTree = "<group>"; };
 		79BDAB1016FF773500F1A581 /* CCRecordingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRecordingViewController.m; sourceTree = "<group>"; };
+		79BDAB1B1700E51500F1A581 /* utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utilities.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +121,7 @@
 		79BDAADA16FDCE2B00F1A581 /* Recorder */ = {
 			isa = PBXGroup;
 			children = (
+				79BDAB1B1700E51500F1A581 /* utilities.h */,
 				79BDAAE316FDCE2B00F1A581 /* CCAppDelegate.h */,
 				79BDAAE416FDCE2B00F1A581 /* CCAppDelegate.m */,
 				79BDAAEC16FDCE2B00F1A581 /* MainStoryboard.storyboard */,
