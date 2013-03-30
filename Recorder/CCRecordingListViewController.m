@@ -13,6 +13,7 @@
 @interface CCRecordingListViewController ()
 {
     NSArray *recordings;
+    NSInteger rowToDelete;
 }
 
 @end
@@ -94,6 +95,33 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     return @"All your recodings";
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete)  {
+        rowToDelete = indexPath.row;
+        UIAlertView* deleteConfimation = [[UIAlertView alloc] initWithTitle:@"Confimation"
+                                                                    message:@"Do you really want to delete the file?"
+                                                                   delegate:self cancelButtonTitle:@"No"
+                                                          otherButtonTitles:@"Yes", nil];
+        [deleteConfimation show];
+    }
+}
+
+#pragma mark -
+#pragma mark UIAlertViewDelegate protocol implemetation
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    CCRecording* recording = recordings[rowToDelete];
+    if (buttonIndex == 1) {
+        [recording deleteFile];
+    }
+    [self updateRecordings];
 }
 
 @end
