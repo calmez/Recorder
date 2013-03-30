@@ -27,15 +27,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	recordings = [[[self class] loadRecodings] copy];
     self.editModeToggle.target = self;
     self.editModeToggle.action = @selector(toggleEditMode);
+	[self updateRecordings];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    recordings = [[[self class] loadRecodings] copy];
-    [self.tableView reloadData];
+    [self updateRecordings];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,6 +79,14 @@
     return recordings;
 }
 
+- (void)updateRecordings
+{
+    NSArray* files = [[[self class] loadRecodings] copy];
+    recordings = [[files reverseObjectEnumerator] allObjects];
+    [self.tableView reloadData];
+}
+
+#pragma mark -
 #pragma mark Table View Controller Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
