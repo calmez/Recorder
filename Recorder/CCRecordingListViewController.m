@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Conrad Calmez. All rights reserved.
 //
 
-#import "utilities.h"
 #import "CCRecording.h"
 #import "CCRecordingListViewController.h"
 
