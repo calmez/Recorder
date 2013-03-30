@@ -11,9 +11,6 @@
 
 @interface CCRecording ()
 
-@property (copy, nonatomic) NSString *name;
-@property (copy, nonatomic) NSData *audioData;
-
 @end
 
 @implementation CCRecording

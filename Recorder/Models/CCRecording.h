@@ -13,6 +13,9 @@
 
 @interface CCRecording : NSObject <NSCoding>
 
+@property (copy, nonatomic) NSString *name;
+@property (copy, nonatomic) NSData *audioData;
+
 - (CCRecording *)init;
 - (CCRecording *)initWithName:(NSString *)aName;
 - (CCRecording *)initWithName:(NSString *)aName andAudioData:(NSData *)audioData; // this is the designated initializer
