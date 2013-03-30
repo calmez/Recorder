@@ -58,11 +58,37 @@
     
     if (isRecoding) {
         // just inserting dummy data
-        currentRecording = [[CCRecording alloc] initWithName:@"foobar" andAudioData:[@"foobar" dataUsingEncoding:NSUTF8StringEncoding]];
+        NSDate* now = [NSDate date];
+        NSDateFormatter* format = [[NSDateFormatter alloc] init];
+        NSLocale* locale = [[NSLocale alloc] initWithLocaleIdentifier:@"de-DE"];
+        format.locale = locale;
+        format.dateStyle = NSDateFormatterMediumStyle;
+        format.timeStyle = NSDateFormatterMediumStyle;
+        NSString* filename = [format stringFromDate:now];
+        currentRecording = [[CCRecording alloc] initWithName:filename
+                                                andAudioData:[@"foobar" dataUsingEncoding:NSUTF8StringEncoding]];
+        // TODO actually capture audio data from mic
     } else {
-        [currentRecording saveFile];
+        UIAlertView* filenameDialog = [[UIAlertView alloc] initWithTitle:@"Enter a filename :"
+                                                                 message:nil
+                                                                delegate:self
+                                                       cancelButtonTitle:nil
+                                                       otherButtonTitles:@"Save", nil];
+        filenameDialog.alertViewStyle = UIAlertViewStylePlainTextInput;
+        [filenameDialog textFieldAtIndex:0].text = currentRecording.name;
+        [filenameDialog show];
     }
     DebugLog(@"Recoding was %@ from %@", isRecoding ? @"started" : @"stopped", button);
+}
+
+#pragma mark -
+#pragma mark UIAlertViewDelegate protocol implemetation
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString* filename = [alertView textFieldAtIndex:0].text;
+    currentRecording.name = filename;
+    [currentRecording saveFile];
 }
 
 @end
