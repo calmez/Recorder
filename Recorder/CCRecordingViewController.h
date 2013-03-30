@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CCRecordingViewController : UIViewController
+@interface CCRecordingViewController : UIViewController <UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *recButton;
 
