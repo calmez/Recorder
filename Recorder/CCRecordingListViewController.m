@@ -101,8 +101,9 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [[recordings objectAtIndex:indexPath.row] name];
-    cell.detailTextLabel.text = @"Additional information to come";
+    CCRecording* recording = [recordings objectAtIndex:indexPath.row];
+    cell.textLabel.text = [recording name];
+    cell.detailTextLabel.text = @"here goes time and playing information";
     return cell;
 }
 
