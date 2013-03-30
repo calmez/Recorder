@@ -14,16 +14,21 @@
 {
     NSArray *recordings;
     NSInteger rowToDelete;
+    BOOL isTableInEditMode;
 }
 
 @end
 
 @implementation CCRecordingListViewController
 
+@synthesize editModeToggle = _editModeToggle;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	recordings = [[[self class] loadRecodings] copy];
+    self.editModeToggle.target = self;
+    self.editModeToggle.action = @selector(toggleEditMode);
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -122,6 +127,17 @@
         [recording deleteFile];
     }
     [self updateRecordings];
+}
+
+#pragma mark Edit mode for table view
+
+- (void)toggleEditMode
+{
+    isTableInEditMode = !isTableInEditMode;
+    [self.tableView setEditing:isTableInEditMode animated:YES];
+}
+
+- (IBAction)nextEntry:(UIBarButtonItem *)sender {
 }
 
 @end

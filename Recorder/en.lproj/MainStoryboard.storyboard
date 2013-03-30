@@ -63,6 +63,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="editModeToggle" destination="abu-QF-8m3" id="Y4g-JW-gDr"/>
                         <outlet property="tableView" destination="Rqc-1P-5ke" id="SIU-e3-eZR"/>
                     </connections>
                 </tableViewController>

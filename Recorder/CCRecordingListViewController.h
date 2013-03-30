@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CCRecordingListViewController : UITableViewController <UITableViewDataSource>
+@interface CCRecordingListViewController : UITableViewController <UITableViewDataSource, UIAlertViewDelegate>
+
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editModeToggle;
 
 @end
