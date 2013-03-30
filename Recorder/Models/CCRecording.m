@@ -18,6 +18,9 @@
 @synthesize name = _name;
 @synthesize audioData = _audioData;
 
+#pragma mark -
+#pragma Initialization
+
 - (CCRecording *)initWithName:(NSString *)aName andAudioData:(NSData *)audioData
 {
     self = [super init];
@@ -54,6 +57,7 @@
     self.audioData = nil;
 }
 
+#pragma mark -
 #pragma mark NSCoding Implementation
 
 #define kNameKey @"name"
@@ -83,6 +87,7 @@
     return _audioData;
 }
 
+#pragma mark -
 #pragma mark File Saving and Deleting
 
 + (NSString *)recodingsDirectory
