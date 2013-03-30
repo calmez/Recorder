@@ -91,6 +91,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7941800C170664510050E473 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				79BDAAEF16FDCE2B00F1A581 /* CCRecordingListViewController.h */,
+				79BDAAF016FDCE2B00F1A581 /* CCRecordingListViewController.m */,
+				79BDAB0F16FF773500F1A581 /* CCRecordingViewController.h */,
+				79BDAB1016FF773500F1A581 /* CCRecordingViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7941800D17066CFB0050E473 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				79BDAB1B1700E51500F1A581 /* utilities.h */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		79BDAAC816FDCE2B00F1A581 = {
 			isa = PBXGroup;
 			children = (
@@ -125,14 +144,11 @@
 			isa = PBXGroup;
 			children = (
 				79BDAB1C1700E8B400F1A581 /* Models */,
-				79BDAB1B1700E51500F1A581 /* utilities.h */,
+				7941800C170664510050E473 /* Controllers */,
+				7941800D17066CFB0050E473 /* Helpers */,
 				79BDAAE316FDCE2B00F1A581 /* CCAppDelegate.h */,
 				79BDAAE416FDCE2B00F1A581 /* CCAppDelegate.m */,
 				79BDAAEC16FDCE2B00F1A581 /* MainStoryboard.storyboard */,
-				79BDAAEF16FDCE2B00F1A581 /* CCRecordingListViewController.h */,
-				79BDAAF016FDCE2B00F1A581 /* CCRecordingListViewController.m */,
-				79BDAB0F16FF773500F1A581 /* CCRecordingViewController.h */,
-				79BDAB1016FF773500F1A581 /* CCRecordingViewController.m */,
 				79BDAADB16FDCE2B00F1A581 /* Supporting Files */,
 			);
 			path = Recorder;
