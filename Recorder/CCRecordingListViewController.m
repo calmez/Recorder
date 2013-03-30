@@ -22,6 +22,8 @@
 
 @synthesize editModeToggle = _editModeToggle;
 
+#pragma mark -
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -42,6 +44,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -
 #pragma mark Loading Files
 
 // TODO duplicate method, already in recording model
@@ -128,6 +131,7 @@
     [self updateRecordings];
 }
 
+#pragma mark -
 #pragma mark Edit mode for table view
 
 - (void)toggleEditMode
@@ -139,6 +143,7 @@
 - (IBAction)nextEntry:(UIBarButtonItem *)sender {
 }
 
+#pragma mark -
 #pragma mark Table navigation methods
 
 - (IBAction)previousEntryWithButton:(UIBarButtonItem *)sender
