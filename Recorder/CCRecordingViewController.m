@@ -22,6 +22,8 @@
 
 @synthesize recButton = _recButton;
 
+#pragma mark -
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -49,6 +51,7 @@
     currentRecording = nil;
 }
 
+#pragma mark -
 #pragma mark Button Actions
 
 - (void)toggleRecording:(UIBarButtonItem *)button
