@@ -140,4 +140,40 @@
 - (IBAction)nextEntry:(UIBarButtonItem *)sender {
 }
 
+#pragma mark Table navigation methods
+
+- (IBAction)previousEntryWithButton:(UIBarButtonItem *)sender
+{
+    NSInteger maxSections = 0;
+    NSInteger minRows = 0;
+    NSInteger maxRows = [self tableView:nil numberOfRowsInSection:maxSections];
+    NSIndexPath* selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    if (selectedIndexPath == NULL) {
+        selectedIndexPath = [NSIndexPath indexPathForItem:maxRows
+                                                inSection:maxSections];
+    }
+    NSIndexPath* newSelection = [NSIndexPath indexPathForRow:(selectedIndexPath.row > minRows ? selectedIndexPath.row - 1 : 0)
+                                                   inSection:selectedIndexPath.section];
+    [self.tableView selectRowAtIndexPath:newSelection
+                                animated:YES
+                          scrollPosition:UITableViewScrollPositionTop];
+}
+
+- (IBAction)nextEntryWithButton:(UIBarButtonItem *)sender
+{
+    NSInteger minSections = 0;
+    NSInteger minRows = -1;
+    NSInteger maxRows = [self tableView:nil numberOfRowsInSection:minSections] - 1;
+    NSIndexPath* selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    if (selectedIndexPath == NULL) {
+        selectedIndexPath = [NSIndexPath indexPathForRow:minRows
+                                               inSection:minSections];
+    }
+    NSIndexPath* newSelection = [NSIndexPath indexPathForRow:(selectedIndexPath.row < maxRows ? selectedIndexPath.row + 1 : maxRows)
+                                                   inSection:selectedIndexPath.section];
+    [self.tableView selectRowAtIndexPath:newSelection
+                                animated:YES
+                          scrollPosition:UITableViewScrollPositionTop];
+}
+
 @end

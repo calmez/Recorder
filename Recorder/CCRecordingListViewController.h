@@ -13,4 +13,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editModeToggle;
 
+- (IBAction)previousEntryWithButton:(UIBarButtonItem *)sender;
+- (IBAction)nextEntryWithButton:(UIBarButtonItem *)sender;
 @end
