@@ -69,9 +69,10 @@
         format.timeStyle = NSDateFormatterMediumStyle;
         NSString* filename = [format stringFromDate:now];
         currentRecording = [[CCRecording alloc] initWithName:filename
-                                                andAudioData:[@"foobar" dataUsingEncoding:NSUTF8StringEncoding]];
-        // TODO actually capture audio data from mic
+                                                andAudioData:[NSData data]];
+        [currentRecording startRecording];
     } else {
+        [currentRecording stopRecording];
         UIAlertView* filenameDialog = [[UIAlertView alloc] initWithTitle:@"Enter a filename :"
                                                                  message:nil
                                                                 delegate:self
