@@ -6,17 +6,22 @@
 //  Copyright (c) 2013 Conrad Calmez. All rights reserved.
 //
 
+#import <AVFoundation/AVFoundation.h>
 #import "utilities.h"
 #import "CCRecording.h"
 
 @interface CCRecording ()
-
+{
+    NSString* tempFilePath;
+}
+@property (nonatomic) AVAudioRecorder* recorder;
 @end
 
 @implementation CCRecording
 
 @synthesize name = _name;
 @synthesize audioData = _audioData;
+@synthesize recorder = _recorder;
 
 #pragma mark -
 #pragma Initialization
@@ -27,8 +32,6 @@
     if (self) {
         self.name = [aName copy];
         self.audioData = [audioData copy];
-        
-        DebugLog(@"data is %@", self.audioData);
     }
     return self;
 }
@@ -132,6 +135,55 @@
     if (!success) {
         NSLog(@"Error removing document at path %@ : %@", path, error.localizedDescription);
     }
+}
+
+#pragma mark -
+#pragma mark Audio Recording
+
+- (void)initializeRecorder
+{
+    NSString* dir = [[self class] recodingsDirectory];
+    NSString* file = [[self.name stringByAppendingString:@"_temp"]
+                      stringByAppendingPathExtension:FILE_NAME_EXTENSION];
+    NSString* path = [dir stringByAppendingPathComponent:file];
+    tempFilePath = path;
+    
+    NSDictionary* recSettings = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 [NSNumber numberWithInt:AVAudioQualityMin],
+                                 AVEncoderAudioQualityKey,
+                                 [NSNumber numberWithInt:16],
+                                 AVEncoderBitRateKey,
+                                 [NSNumber numberWithInt: 2],
+                                 AVNumberOfChannelsKey,
+                                 [NSNumber numberWithFloat:44100.0],
+                                 AVSampleRateKey,
+                                 nil];
+    
+    NSError* error = nil;
+    
+    self.recorder = [[AVAudioRecorder alloc] initWithURL:[NSURL fileURLWithPath:path]
+                                                settings:recSettings
+                                                   error:&error];
+    
+    if (error) {
+        DebugLog(@"Error initializing recorder : %@", error);
+    } else {
+        [self.recorder prepareToRecord];
+    }
+}
+
+- (void)startRecording
+{
+    [self initializeRecorder];
+    [self.recorder record];
+}
+
+- (void)stopRecording
+{
+    [self.recorder stop];
+    NSData* soundData = [[NSData alloc] initWithContentsOfFile:tempFilePath];
+    self.audioData = soundData;
+    [self.recorder deleteRecording];
 }
 
 @end

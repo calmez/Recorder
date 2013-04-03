@@ -21,5 +21,7 @@
 - (CCRecording *)initWithName:(NSString *)aName andAudioData:(NSData *)audioData; // this is the designated initializer
 - (void)saveFile;
 - (void)deleteFile;
+- (void)startRecording;
+- (void)stopRecording;
 
 @end
