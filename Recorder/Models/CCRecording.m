@@ -118,12 +118,8 @@
 {
     if (self.audioData == nil) return;
     [self createPath];
-    NSString *path = [[[[self class] recodingsDirectory] stringByAppendingPathComponent:self.name] stringByAppendingPathExtension:FILE_NAME_EXTENSION];
-    NSMutableData *data = [[NSMutableData alloc] init];
-    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
-    [archiver encodeObject:_audioData forKey:kAudioDataKey];
-    [archiver finishEncoding];
-    [data writeToFile:path atomically:YES];
+    NSString* path = [[[[self class] recodingsDirectory] stringByAppendingPathComponent:self.name] stringByAppendingPathExtension:FILE_NAME_EXTENSION];
+    [self.audioData writeToFile:path atomically:YES];
     DebugLog(@"Save file with name %@ to %@", self.name, path);
 }
 
