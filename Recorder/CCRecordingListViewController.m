@@ -11,7 +11,7 @@
 
 @interface CCRecordingListViewController ()
 {
-    NSArray *recordings;
+    NSArray* recordings;
     NSInteger rowToDelete;
     BOOL isTableInEditMode;
 }
