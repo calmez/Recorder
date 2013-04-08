@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Conrad Calmez. All rights reserved.
 //
 
-#import <AVFoundation/AVFoundation.h>
 #import "utilities.h"
 #import "CCRecording.h"
 

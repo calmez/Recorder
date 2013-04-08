@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 #define FILE_NAME_EXTENSION @"wav"
 #define RECODINGS_PATH @"Recordings"
