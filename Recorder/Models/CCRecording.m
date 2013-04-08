@@ -80,12 +80,7 @@
 
 - (NSData *)audioData {
     if (_audioData != nil) return _audioData;
-    NSString *path = [[RECODINGS_PATH stringByAppendingPathComponent:self.name] stringByAppendingPathExtension:FILE_NAME_EXTENSION];
-    NSData *codedData = [[NSData alloc] initWithContentsOfFile:path];
-    if (codedData == nil) return nil;
-    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:codedData];
-    _audioData = [unarchiver decodeObjectForKey:kAudioDataKey];
-    [unarchiver finishDecoding];
+    _audioData = [[NSData alloc] initWithContentsOfFile:[self filePath]];
     return _audioData;
 }
 
