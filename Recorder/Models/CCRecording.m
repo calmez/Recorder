@@ -12,7 +12,7 @@
 {
     NSString* tempFilePath;
 }
-@property (nonatomic) AVAudioRecorder* recorder;
+@property (strong, nonatomic) AVAudioRecorder* recorder;
 @property (strong, nonatomic) AVAudioPlayer* player;
 @end
 
