@@ -14,6 +14,7 @@
     NSString* tempFilePath;
 }
 @property (nonatomic) AVAudioRecorder* recorder;
+@property (strong, nonatomic) AVAudioPlayer* player;
 @end
 
 @implementation CCRecording
@@ -181,4 +182,34 @@
     [self.recorder deleteRecording];
 }
 
+#pragma mark -
+#pragma Audio Playback
+
+- (void)initializePlayer
+{
+    NSError* error = nil;
+    
+    self.player = [[AVAudioPlayer alloc] initWithData:self.audioData error:&error];
+    self.player.delegate = self;
+    
+    if (error) {
+        DebugLog(@"Error initializing player : %@", error);
+    }
+}
+
+- (void)startPlayback
+{
+    [self initializePlayer];
+    [self.player play];
+}
+
+- (void)stopPlayback
+{
+    [self.player stop];
+}
+
+- (void)pausePlayback
+{
+    [self.player pause];
+}
 @end

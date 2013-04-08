@@ -24,5 +24,8 @@
 - (void)deleteFile;
 - (void)startRecording;
 - (void)stopRecording;
+- (void)startPlayback;
+- (void)pausePlayback;
+- (void)stopPlayback;
 
 @end
