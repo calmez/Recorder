@@ -104,6 +104,12 @@
     return success;
 }
 
+- (NSString *)filePath
+{
+    [[self class] createPath];
+    return [[[[self class] recodingsDirectory] stringByAppendingPathComponent:self.name] stringByAppendingPathExtension:FILE_NAME_EXTENSION];
+}
+
 - (void)saveFile
 {
     if (self.audioData == nil) return;
