@@ -12,7 +12,7 @@
 #define FILE_NAME_EXTENSION @"wav"
 #define RECODINGS_PATH @"Recordings"
 
-@interface CCRecording : NSObject <NSCoding>
+@interface CCRecording : NSObject <NSCoding, AVAudioPlayerDelegate>
 
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSData *audioData;

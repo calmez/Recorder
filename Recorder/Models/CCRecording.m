@@ -212,4 +212,18 @@
 {
     [self.player pause];
 }
+
+#pragma mark -
+#pragma mark AudioPlayerDelegate Methods
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    DebugLog(@"Finished playing audio with %@", flag ? @"success" : @"errors");
+}
+
+- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error
+{
+    DebugLog(@"Error decoding audio data : %@", error);
+}
+
 @end
