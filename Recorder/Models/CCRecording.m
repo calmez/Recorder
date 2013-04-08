@@ -97,16 +97,12 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *recodingsDirectory = [paths objectAtIndex:0];
     recodingsDirectory = [recodingsDirectory stringByAppendingPathComponent:RECODINGS_PATH];
-    
-    NSError *error;
-    [[NSFileManager defaultManager] createDirectoryAtPath:recodingsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
-    
     return recodingsDirectory;
 }
 
-- (BOOL)createPath {
++ (BOOL)createPath {
     NSError *error;
-    BOOL success = [[NSFileManager defaultManager] createDirectoryAtPath:RECODINGS_PATH withIntermediateDirectories:YES attributes:nil error:&error];
+    BOOL success = [[NSFileManager defaultManager] createDirectoryAtPath:[self recodingsDirectory] withIntermediateDirectories:YES attributes:nil error:&error];
     if (!success) {
         NSLog(@"Error creating data path: %@", [error localizedDescription]);
     }
