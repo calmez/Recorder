@@ -48,8 +48,16 @@
                                 <action selector="previousEntryWithButton:" destination="T4O-JN-xEq" id="7Tq-ES-Pxv"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem systemItem="play" id="q15-zb-kcS"/>
-                        <barButtonItem systemItem="pause" id="dtN-ae-iP2"/>
+                        <barButtonItem systemItem="play" id="q15-zb-kcS">
+                            <connections>
+                                <action selector="playCurrentItemWithButton:" destination="T4O-JN-xEq" id="mfk-aG-riY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="pause" id="dtN-ae-iP2">
+                            <connections>
+                                <action selector="pausePlayingItemWithButton:" destination="T4O-JN-xEq" id="tnH-hZ-7aR"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem systemItem="fastForward" id="VgD-M7-sSE">
                             <connections>
                                 <action selector="nextEntryWithButton:" destination="T4O-JN-xEq" id="ZxC-Mh-NcK"/>

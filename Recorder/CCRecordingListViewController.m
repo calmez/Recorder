@@ -14,6 +14,7 @@
     NSArray* recordings;
     NSInteger rowToDelete;
     BOOL isTableInEditMode;
+    CCRecording* playingItem;
 }
 
 @end
@@ -181,6 +182,18 @@
     [self.tableView selectRowAtIndexPath:newSelection
                                 animated:YES
                           scrollPosition:UITableViewScrollPositionTop];
+}
+
+- (IBAction)playCurrentItemWithButton:(UIBarButtonItem *)sender
+{
+    [playingItem stopPlayback];
+    playingItem = recordings[[[self.tableView indexPathForSelectedRow] row]];
+    [playingItem startPlayback];
+}
+
+- (IBAction)pausePlayingItemWithButton:(UIBarButtonItem *)sender
+{
+    [playingItem pausePlayback];
 }
 
 @end

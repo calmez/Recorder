@@ -15,4 +15,8 @@
 
 - (IBAction)previousEntryWithButton:(UIBarButtonItem *)sender;
 - (IBAction)nextEntryWithButton:(UIBarButtonItem *)sender;
+
+- (IBAction)playCurrentItemWithButton:(UIBarButtonItem *)sender;
+- (IBAction)pausePlayingItemWithButton:(UIBarButtonItem *)sender;
+
 @end
