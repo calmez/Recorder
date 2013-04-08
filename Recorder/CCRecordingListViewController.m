@@ -53,7 +53,8 @@
     return recodingsDirectory;
 }
 
-+ (NSMutableArray *)loadRecodings {
++ (NSMutableArray *)loadRecodings
+{
     NSString *recordingsDirectory = [self recodingsDirectory];
     DebugLog(@"Loading recordings from %@", recordingsDirectory);
     NSError *error;
