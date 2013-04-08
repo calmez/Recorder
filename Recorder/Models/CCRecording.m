@@ -113,10 +113,8 @@
 - (void)saveFile
 {
     if (self.audioData == nil) return;
-    [self createPath];
-    NSString* path = [[[[self class] recodingsDirectory] stringByAppendingPathComponent:self.name] stringByAppendingPathExtension:FILE_NAME_EXTENSION];
-    [self.audioData writeToFile:path atomically:YES];
-    DebugLog(@"Save file with name %@ to %@", self.name, path);
+    [self.audioData writeToFile:[self filePath] atomically:YES];
+    DebugLog(@"Save file with name %@ to %@", self.name, [self filePath]);
 }
 
 - (void)deleteFile
