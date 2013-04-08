@@ -15,6 +15,7 @@
     NSInteger rowToDelete;
     BOOL isTableInEditMode;
     CCRecording* playingItem;
+    BOOL isPlaying;
 }
 
 @end
@@ -35,6 +36,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    isPlaying = NO;
     [self updateRecordings];
 }
 
@@ -165,6 +167,9 @@
     [self.tableView selectRowAtIndexPath:newSelection
                                 animated:YES
                           scrollPosition:UITableViewScrollPositionTop];
+    if (isPlaying) {
+        [self playCurrentItemWithButton:nil];
+    }
 }
 
 - (IBAction)nextEntryWithButton:(UIBarButtonItem *)sender
@@ -182,10 +187,14 @@
     [self.tableView selectRowAtIndexPath:newSelection
                                 animated:YES
                           scrollPosition:UITableViewScrollPositionTop];
+    if (isPlaying) {
+        [self playCurrentItemWithButton:nil];
+    }
 }
 
 - (IBAction)playCurrentItemWithButton:(UIBarButtonItem *)sender
 {
+    isPlaying = YES;
     [playingItem stopPlayback];
     playingItem = recordings[[[self.tableView indexPathForSelectedRow] row]];
     [playingItem startPlayback];
@@ -193,6 +202,7 @@
 
 - (IBAction)pausePlayingItemWithButton:(UIBarButtonItem *)sender
 {
+    isPlaying = NO;
     [playingItem pausePlayback];
 }
 
