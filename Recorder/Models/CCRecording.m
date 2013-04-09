@@ -119,11 +119,15 @@
 
 - (void)deleteFile
 {
-    NSString *path = [[[[self class] recodingsDirectory] stringByAppendingPathComponent:self.name] stringByAppendingPathExtension:FILE_NAME_EXTENSION];
     NSError *error;
-    BOOL success = [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
+    BOOL success = [[NSFileManager defaultManager]
+                                        removeItemAtPath:[self filePath]
+                                                   error:&error];
     if (!success) {
-        NSLog(@"Error removing document at path %@ : %@", path, error.localizedDescription);
+        NSLog(@"Error removing document at path %@ : %@",
+              [self filePath],
+              error.localizedDescription
+        );
     }
 }
 
