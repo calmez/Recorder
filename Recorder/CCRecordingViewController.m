@@ -42,10 +42,10 @@
 #pragma mark -
 #pragma mark Button Actions
 
-- (void)toggleRecording:(UIBarButtonItem *)button
+- (void)toggleRecording:(UIButton *)sender
 {
     isRecoding = !isRecoding;
-    [button setTitle:isRecoding ? @"Stop" : @"Rec"];
+    [sender setTitle:(isRecoding ? @"Stop" : @"Record") forState:UIControlStateNormal];
     
     if (isRecoding) {
         // just inserting dummy data
@@ -71,7 +71,7 @@
         [filenameDialog textFieldAtIndex:0].text = currentRecording.name;
         [filenameDialog show];
     }
-    DebugLog(@"Recoding was %@ from %@", isRecoding ? @"started" : @"stopped", button);
+    DebugLog(@"Recoding was %@ from %@", isRecoding ? @"started" : @"stopped", sender);
 }
 
 #pragma mark -
