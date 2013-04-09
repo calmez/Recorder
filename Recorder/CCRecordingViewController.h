@@ -10,6 +10,4 @@
 
 @interface CCRecordingViewController : UIViewController <UIAlertViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *recButton;
-
 @end

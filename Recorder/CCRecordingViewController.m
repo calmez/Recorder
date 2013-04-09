@@ -20,8 +20,6 @@
 
 @implementation CCRecordingViewController
 
-@synthesize recButton = _recButton;
-
 #pragma mark -
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -31,13 +29,6 @@
         isRecoding = NO;
     }
     return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [self.recButton setTarget:self];
-	[self.recButton setAction:@selector(toggleRecording:)];
 }
 
 - (void)didReceiveMemoryWarning
