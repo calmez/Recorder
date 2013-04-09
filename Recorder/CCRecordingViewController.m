@@ -48,7 +48,6 @@
     [sender setTitle:(isRecoding ? @"Stop" : @"Record") forState:UIControlStateNormal];
     
     if (isRecoding) {
-        // just inserting dummy data
         NSDate* now = [NSDate date];
         NSDateFormatter* format = [[NSDateFormatter alloc] init];
         NSLocale* locale = [[NSLocale alloc] initWithLocaleIdentifier:@"de-DE"];
