@@ -73,6 +73,27 @@
     DebugLog(@"Recoding was %@ from %@", isRecoding ? @"started" : @"stopped", sender);
 }
 
+- (IBAction)playRecording:(UIBarButtonItem *)sender
+{
+    if (currentRecording) {
+        [currentRecording startPlayback];
+    }
+}
+
+- (IBAction)pauseRecording:(UIBarButtonItem *)sender
+{
+    if (currentRecording) {
+        [currentRecording pausePlayback];
+    }
+}
+
+- (IBAction)deleteRecording:(UIBarButtonItem *)sender
+{
+    if (currentRecording) {
+        [currentRecording deleteFile];
+    }
+}
+
 #pragma mark -
 #pragma mark UIAlertViewDelegate protocol implemetation
 
