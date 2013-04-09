@@ -15,7 +15,10 @@
     BOOL isRecoding;
     CCRecording *currentRecording;
 }
-
+- (IBAction)toggleRecording:(UIButton *)sender;
+- (IBAction)playRecording:(UIBarButtonItem *)sender;
+- (IBAction)pauseRecording:(UIBarButtonItem *)sender;
+- (IBAction)deleteRecording:(UIBarButtonItem *)sender;
 @end
 
 @implementation CCRecordingViewController
