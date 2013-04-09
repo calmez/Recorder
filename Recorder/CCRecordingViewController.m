@@ -61,11 +61,12 @@
         [currentRecording startRecording];
     } else {
         [currentRecording stopRecording];
-        UIAlertView* filenameDialog = [[UIAlertView alloc] initWithTitle:@"Enter a filename :"
-                                                                 message:nil
-                                                                delegate:self
-                                                       cancelButtonTitle:nil
-                                                       otherButtonTitles:@"Save", nil];
+        UIAlertView* filenameDialog = [[UIAlertView alloc]
+                                                initWithTitle:@"Enter a filename :"
+                                                      message:nil
+                                                     delegate:self
+                                            cancelButtonTitle:nil
+                                            otherButtonTitles:@"Save", nil];
         filenameDialog.alertViewStyle = UIAlertViewStylePlainTextInput;
         [filenameDialog textFieldAtIndex:0].text = currentRecording.name;
         [filenameDialog show];
