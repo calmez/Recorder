@@ -26,6 +26,7 @@
 		79BDAB0616FDCE2B00F1A581 /* RecorderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAB0516FDCE2B00F1A581 /* RecorderTests.m */; };
 		79BDAB1116FF773500F1A581 /* CCRecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAB1016FF773500F1A581 /* CCRecordingViewController.m */; };
 		79BDAB1F1700E8E000F1A581 /* CCRecording.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAB1E1700E8E000F1A581 /* CCRecording.m */; };
+		79FDCD3117162B8B0062ACD6 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FDCD3017162B8B0062ACD6 /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		79BDAB1B1700E51500F1A581 /* utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utilities.h; sourceTree = "<group>"; };
 		79BDAB1D1700E8E000F1A581 /* CCRecording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCRecording.h; path = Models/CCRecording.h; sourceTree = "<group>"; };
 		79BDAB1E1700E8E000F1A581 /* CCRecording.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCRecording.m; path = Models/CCRecording.m; sourceTree = "<group>"; };
+		79FDCD3017162B8B0062ACD6 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79FDCD3117162B8B0062ACD6 /* CoreMedia.framework in Frameworks */,
 				7941800F170B6C900050E473 /* AVFoundation.framework in Frameworks */,
 				79BDAAD516FDCE2B00F1A581 /* UIKit.framework in Frameworks */,
 				79BDAAD716FDCE2B00F1A581 /* Foundation.framework in Frameworks */,
@@ -135,6 +138,7 @@
 		79BDAAD316FDCE2B00F1A581 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79FDCD3017162B8B0062ACD6 /* CoreMedia.framework */,
 				7941800E170B6C900050E473 /* AVFoundation.framework */,
 				79BDAAD416FDCE2B00F1A581 /* UIKit.framework */,
 				79BDAAD616FDCE2B00F1A581 /* Foundation.framework */,
