@@ -14,9 +14,6 @@
 		79BDAADF16FDCE2B00F1A581 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79BDAADD16FDCE2B00F1A581 /* InfoPlist.strings */; };
 		79BDAAE116FDCE2B00F1A581 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAAE016FDCE2B00F1A581 /* main.m */; };
 		79BDAAE516FDCE2B00F1A581 /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAAE416FDCE2B00F1A581 /* CCAppDelegate.m */; };
-		79BDAAE716FDCE2B00F1A581 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BDAAE616FDCE2B00F1A581 /* Default.png */; };
-		79BDAAE916FDCE2B00F1A581 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BDAAE816FDCE2B00F1A581 /* Default@2x.png */; };
-		79BDAAEB16FDCE2B00F1A581 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BDAAEA16FDCE2B00F1A581 /* Default-568h@2x.png */; };
 		79BDAAEE16FDCE2B00F1A581 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BDAAEC16FDCE2B00F1A581 /* MainStoryboard.storyboard */; };
 		79BDAAF116FDCE2B00F1A581 /* CCRecordingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAAF016FDCE2B00F1A581 /* CCRecordingListViewController.m */; };
 		79BDAAF916FDCE2B00F1A581 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BDAAF816FDCE2B00F1A581 /* SenTestingKit.framework */; };
@@ -27,6 +24,9 @@
 		79BDAB1116FF773500F1A581 /* CCRecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAB1016FF773500F1A581 /* CCRecordingViewController.m */; };
 		79BDAB1F1700E8E000F1A581 /* CCRecording.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BDAB1E1700E8E000F1A581 /* CCRecording.m */; };
 		79FDCD3117162B8B0062ACD6 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FDCD3017162B8B0062ACD6 /* CoreMedia.framework */; };
+		79FDCD3417162EE80062ACD6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 79FDCD3217162EE80062ACD6 /* Default.png */; };
+		79FDCD3517162EE80062ACD6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79FDCD3317162EE80062ACD6 /* Default@2x.png */; };
+		79FDCD3717162F750062ACD6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79FDCD3617162F750062ACD6 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +51,6 @@
 		79BDAAE216FDCE2B00F1A581 /* Recorder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Recorder-Prefix.pch"; sourceTree = "<group>"; };
 		79BDAAE316FDCE2B00F1A581 /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
 		79BDAAE416FDCE2B00F1A581 /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
-		79BDAAE616FDCE2B00F1A581 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		79BDAAE816FDCE2B00F1A581 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		79BDAAEA16FDCE2B00F1A581 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		79BDAAED16FDCE2B00F1A581 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		79BDAAEF16FDCE2B00F1A581 /* CCRecordingListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCRecordingListViewController.h; sourceTree = "<group>"; };
 		79BDAAF016FDCE2B00F1A581 /* CCRecordingListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCRecordingListViewController.m; sourceTree = "<group>"; };
@@ -69,6 +66,9 @@
 		79BDAB1D1700E8E000F1A581 /* CCRecording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCRecording.h; path = Models/CCRecording.h; sourceTree = "<group>"; };
 		79BDAB1E1700E8E000F1A581 /* CCRecording.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCRecording.m; path = Models/CCRecording.m; sourceTree = "<group>"; };
 		79FDCD3017162B8B0062ACD6 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		79FDCD3217162EE80062ACD6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		79FDCD3317162EE80062ACD6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		79FDCD3617162F750062ACD6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +169,9 @@
 				79BDAADD16FDCE2B00F1A581 /* InfoPlist.strings */,
 				79BDAAE016FDCE2B00F1A581 /* main.m */,
 				79BDAAE216FDCE2B00F1A581 /* Recorder-Prefix.pch */,
-				79BDAAE616FDCE2B00F1A581 /* Default.png */,
-				79BDAAE816FDCE2B00F1A581 /* Default@2x.png */,
-				79BDAAEA16FDCE2B00F1A581 /* Default-568h@2x.png */,
+				79FDCD3217162EE80062ACD6 /* Default.png */,
+				79FDCD3317162EE80062ACD6 /* Default@2x.png */,
+				79FDCD3617162F750062ACD6 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -277,10 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				79BDAADF16FDCE2B00F1A581 /* InfoPlist.strings in Resources */,
-				79BDAAE716FDCE2B00F1A581 /* Default.png in Resources */,
-				79BDAAE916FDCE2B00F1A581 /* Default@2x.png in Resources */,
-				79BDAAEB16FDCE2B00F1A581 /* Default-568h@2x.png in Resources */,
 				79BDAAEE16FDCE2B00F1A581 /* MainStoryboard.storyboard in Resources */,
+				79FDCD3417162EE80062ACD6 /* Default.png in Resources */,
+				79FDCD3517162EE80062ACD6 /* Default@2x.png in Resources */,
+				79FDCD3717162F750062ACD6 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
