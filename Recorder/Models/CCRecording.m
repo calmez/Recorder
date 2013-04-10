@@ -224,4 +224,26 @@
     DebugLog(@"Error decoding audio data : %@", error);
 }
 
+#pragma mark -
+#pragma mark Duration of the Audio File
+
+- (NSUInteger)durationInSeconds
+{
+    NSURL *fileURL = [NSURL fileURLWithPath:[self filePath]];
+    AVURLAsset* audioAsset = [AVURLAsset URLAssetWithURL:fileURL options:nil];
+    CMTime audioDuration = audioAsset.duration;
+    float durationInSeconds = CMTimeGetSeconds(audioDuration);
+    return [[NSNumber numberWithFloat:durationInSeconds] integerValue];
+}
+
+- (NSUInteger)durationInMinutes
+{
+    return ([self durationInSeconds] / 60);
+}
+
+- (NSUInteger)durationInHours
+{
+    return ([self durationInMinutes] / 60);
+}
+
 @end

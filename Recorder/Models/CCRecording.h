@@ -28,4 +28,8 @@
 - (void)pausePlayback;
 - (void)stopPlayback;
 
+- (NSUInteger)durationInSeconds;
+- (NSUInteger)durationInMinutes;
+- (NSUInteger)durationInHours;
+
 @end
