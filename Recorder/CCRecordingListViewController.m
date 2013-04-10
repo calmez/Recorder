@@ -101,7 +101,10 @@
     }
     CCRecording* recording = [recordings objectAtIndex:indexPath.row];
     cell.textLabel.text = [recording name];
-    cell.detailTextLabel.text = @"here goes time and playing information";
+    NSUInteger h = [recording durationInHours];
+    NSUInteger m = [recording durationInMinutes] - 60*h;
+    NSUInteger s = [recording durationInSeconds] - 60*m;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d", h, m, s];
     return cell;
 }
 
