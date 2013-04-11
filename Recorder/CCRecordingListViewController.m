@@ -167,6 +167,9 @@
     }
     NSIndexPath* newSelection = [NSIndexPath indexPathForRow:(selectedIndexPath.row > minRows ? selectedIndexPath.row - 1 : 0)
                                                    inSection:selectedIndexPath.section];
+    if ([selectedIndexPath compare:newSelection] == NSOrderedSame) {
+        return;
+    }
     [self.tableView selectRowAtIndexPath:newSelection
                                 animated:YES
                           scrollPosition:UITableViewScrollPositionTop];
@@ -187,6 +190,9 @@
     }
     NSIndexPath* newSelection = [NSIndexPath indexPathForRow:(selectedIndexPath.row < maxRows ? selectedIndexPath.row + 1 : maxRows)
                                                    inSection:selectedIndexPath.section];
+    if ([selectedIndexPath compare:newSelection] == NSOrderedSame) {
+        return;
+    }
     [self.tableView selectRowAtIndexPath:newSelection
                                 animated:YES
                           scrollPosition:UITableViewScrollPositionTop];
