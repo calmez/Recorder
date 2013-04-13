@@ -11,6 +11,7 @@
 @interface CCRecording ()
 {
     NSString* tempFilePath;
+    NSTimer* currentTimeFetch;
 }
 @property (strong, nonatomic) AVAudioRecorder* recorder;
 @property (strong, nonatomic) AVAudioPlayer* player;
@@ -199,17 +200,35 @@
 - (void)startPlayback
 {
     [self initializePlayer];
+    currentTimeFetch = [[NSTimer alloc] initWithFireDate:[NSDate date]
+                                                interval:1
+                                                  target:self
+                                                selector:@selector(fetchCurrentTimeWithTimer:)
+                                                userInfo:nil
+                                                 repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:currentTimeFetch
+                                 forMode:NSDefaultRunLoopMode];
     [self.player play];
 }
 
 - (void)stopPlayback
 {
+    if (currentTimeFetch != nil) {
+        [currentTimeFetch invalidate];
+    }
     [self.player stop];
 }
 
 - (void)pausePlayback
 {
+    if (currentTimeFetch != nil) {
+        [currentTimeFetch invalidate];
+    }
     [self.player pause];
+}
+
+- (void)fetchCurrentTimeWithTimer:(NSTimer *)timer
+{
 }
 
 #pragma mark -
@@ -217,11 +236,17 @@
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
+    if (currentTimeFetch) {
+        [currentTimeFetch invalidate];
+    }
     DebugLog(@"Finished playing audio with %@", flag ? @"success" : @"errors");
 }
 
 - (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error
 {
+    if (currentTimeFetch) {
+        [currentTimeFetch invalidate];
+    }
     DebugLog(@"Error decoding audio data : %@", error);
 }
 
