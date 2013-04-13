@@ -221,4 +221,31 @@
     [playingItem pausePlayback];
 }
 
+#pragma mark -
+#pragma mark CCRecordingDelegate Methods
+
+- (void)currentTime:(NSTimeInterval)currentTime
+{
+    NSInteger minSections = 0;
+    NSIndexPath* cellPathForCurrentRecording;
+    cellPathForCurrentRecording = [NSIndexPath indexPathForRow:[recordings indexOfObject:playingItem]
+                                                     inSection:minSections];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:cellPathForCurrentRecording];
+    [self fillDetailLabelOfCell:cell forRecoding:playingItem];
+    NSUInteger h = round(currentTime) / 60 / 60;
+    NSUInteger m = round(currentTime) / 60 - h*60;
+    NSUInteger s = round(currentTime) - 60*m - 60*60*h;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d / %@", h, m, s, cell.detailTextLabel.text];
+}
+
+- (void)stoppedPlaying:(BOOL)success
+{
+    NSInteger minSections = 0;
+    NSIndexPath* cellPathForCurrentRecording;
+    cellPathForCurrentRecording = [NSIndexPath indexPathForRow:[recordings indexOfObject:playingItem]
+                                                     inSection:minSections];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:cellPathForCurrentRecording];
+    [self fillDetailLabelOfCell:cell forRecoding:playingItem];
+}
+
 @end
