@@ -101,11 +101,16 @@
     }
     CCRecording* recording = [recordings objectAtIndex:indexPath.row];
     cell.textLabel.text = [recording name];
+    [self fillDetailLabelOfCell:cell forRecoding:recording];
+    return cell;
+}
+
+- (void)fillDetailLabelOfCell:(UITableViewCell *)cell forRecoding:(CCRecording *)recording
+{
     NSUInteger h = [recording durationInHours];
     NSUInteger m = [recording durationInMinutes] - 60*h;
     NSUInteger s = [recording durationInSeconds] - 60*m;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d", h, m, s];
-    return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
