@@ -12,10 +12,21 @@
 #define FILE_NAME_EXTENSION @"wav"
 #define RECODINGS_PATH @"Recordings"
 
+@protocol CCRecordingDelegate <NSObject>
+
+@optional
+- (void)statedPlaying;
+- (void)stoppedPlaying:(BOOL)success;
+- (void)currentTime:(NSTimeInterval)currentTime;
+
+@end
+
 @interface CCRecording : NSObject <NSCoding, AVAudioPlayerDelegate>
 
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSData *audioData;
+
+@property (weak, nonatomic) id<CCRecordingDelegate> delegate;
 
 - (CCRecording *)init;
 - (CCRecording *)initWithName:(NSString *)aName;

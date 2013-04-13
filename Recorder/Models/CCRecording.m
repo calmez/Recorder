@@ -21,6 +21,7 @@
 
 @synthesize name = _name;
 @synthesize audioData = _audioData;
+@synthesize delegate = _delegate;
 @synthesize player = _player;
 @synthesize recorder = _recorder;
 
