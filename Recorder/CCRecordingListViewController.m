@@ -206,6 +206,7 @@
     isPlaying = YES;
     [playingItem stopPlayback];
     playingItem = recordings[[[self.tableView indexPathForSelectedRow] row]];
+    playingItem.delegate = self;
     [playingItem startPlayback];
 }
 
