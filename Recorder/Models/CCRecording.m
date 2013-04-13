@@ -20,6 +20,7 @@
 
 @synthesize name = _name;
 @synthesize audioData = _audioData;
+@synthesize player = _player;
 @synthesize recorder = _recorder;
 
 #pragma mark -
