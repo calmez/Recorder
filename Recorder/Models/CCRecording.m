@@ -210,12 +210,18 @@
     [[NSRunLoop currentRunLoop] addTimer:currentTimeFetch
                                  forMode:NSDefaultRunLoopMode];
     [self.player play];
+    if ([self.delegate respondsToSelector:@selector(statedPlaying)]) {
+        [self.delegate statedPlaying];
+    }
 }
 
 - (void)stopPlayback
 {
     if (currentTimeFetch != nil) {
         [currentTimeFetch invalidate];
+    }
+    if ([self.delegate respondsToSelector:@selector(stoppedPlaying:)]) {
+        [self.delegate stoppedPlaying:YES];
     }
     [self.player stop];
 }
@@ -225,11 +231,17 @@
     if (currentTimeFetch != nil) {
         [currentTimeFetch invalidate];
     }
+    if ([self.delegate respondsToSelector:@selector(stoppedPlaying:)]) {
+        [self.delegate stoppedPlaying:YES];
+    }
     [self.player pause];
 }
 
 - (void)fetchCurrentTimeWithTimer:(NSTimer *)timer
 {
+    if ([self.delegate respondsToSelector:@selector(currentTime:)]) {
+        [self.delegate currentTime:[self.player currentTime]];
+    }
 }
 
 #pragma mark -
@@ -240,6 +252,9 @@
     if (currentTimeFetch) {
         [currentTimeFetch invalidate];
     }
+    if ([self.delegate respondsToSelector:@selector(stoppedPlaying:)]) {
+        [self.delegate stoppedPlaying:YES];
+    }
     DebugLog(@"Finished playing audio with %@", flag ? @"success" : @"errors");
 }
 
@@ -247,6 +262,9 @@
 {
     if (currentTimeFetch) {
         [currentTimeFetch invalidate];
+    }
+    if ([self.delegate respondsToSelector:@selector(stoppedPlaying:)]) {
+        [self.delegate stoppedPlaying:NO];
     }
     DebugLog(@"Error decoding audio data : %@", error);
 }
